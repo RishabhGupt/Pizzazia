@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">Pizzazia</string>
+    <string name="username">Username</string>
+    <string name="usernameValue">Enter Your Username</string>
+    <string name="password">Password</string>
+    <string name="passwordValue">Enter Your Password</string>
+    <string name="login">Login</string>
+    <string name="choice">or Create a new account</string>
+    <string name="signUp">SignUp</string>
+    <string name="skip">Skip</string>
+    <string name="clickLogin">Login</string>
+
+    <string name="name">Name</string>
+    <string name="nameValue">Enter your full name</string>
+    <string name="email">E-mail</string>
+    <string name="emailValue">Enter your e-mail</string>
+    <string name="confirmPassword">Confirm Password</string>
+    <string name="confirmPasswordValue">Enter password again</string>
+    <string name="submit">Submit</string>
+
+    <string name="veg">VEG ONLY</string>
+    <string name="toast_message">Please add item</string>
+    <string name="pizzazia">Veg Only</string>
+
+
+    <string name="marg">onion,capsicum,grilled mushroom,corn, paneer</string>
+    <string name="crud">Black olives, capsicum, onion, grilled mushroom, tomato, jalapeno</string>
+    <string name="cheeseVeggie">Hot and spicy.Tandoorii paneer with capsicum</string>
+    <string name="vegloaded">Mexican herbs with lot of vegetables and lot of cheese</string>
+    <string name="name_margherita">Margherita</string>
+    <string name="price_margherita">Rs. 150</string>
+    <string name="totals">Your total amount is </string>
+
+    <string name="name_crudo">Crudo</string>
+    <string name="price_crudo">Rs. 125</string>
+    <string name="cheese_veggie">Cheese Veggie</string>
+    <string name="price_veggie">Rs. 250</string>
+    <string name="name_loaded">Veg Overloaded</string>
+    <string name="price_loaded">Rs. 255</string>
+    <string name="no_crudo">0</string>
+    <string name="no_cheeseveggie">0</string>
+    <string name="no_overloaded">0</string>
+    <string name="remove_crudo">-</string>
+    <string name="add_crudo">+</string>
+    <string name="remove_cheeseveggie">-</string>
+    <string name="add_cheeseveggie">+</string>
+    <string name="remove_loaded">-</string>
+    <string name="add_loaded">+</string>
+    <string name="no_margherita">0</string>
+    <string name="add_margherita">+</string>
+    <string name="remove_margherita">-</string>
+
+    <string name="buttonPayment">Place Your Order</string>
+
+</resources>
