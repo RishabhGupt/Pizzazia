@@ -50,6 +50,14 @@
     <string name="add_margherita">+</string>
     <string name="remove_margherita">-</string>
 
-    <string name="buttonPayment">Place Your Order</string>
+    <string name="buttonPayment">SEE YOUR DETAILS</string>
+    <string name="pizza_s">Pizza\'s</string>
+    <string name="net_amount">Net Amount</string>
+    <string name="show_detail">Show Detail</string>
+    <string name="gst_of_10">GST of 1%</string>
+    <string name="total_amount">Total Amount</string>
+    <string name="place_your_order">PLACE YOUR ORDER</string>
+    <string name="address">Address</string>
+    <string name="enter_your_address">Enter Your Address</string>
 
 </resources>

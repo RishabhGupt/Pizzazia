@@ -2,17 +2,18 @@ package rishabhgupta.appdemo.pizzazia;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.ProgressDialog;
+//import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
+//import android.os.Handler;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import java.util.LinkedHashMap;
-import java.util.Map;
+//import java.util.Map;
 import java.util.Objects;
 
 public class LoginActivity extends AppCompatActivity {
@@ -21,7 +22,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText password;
     public static boolean skip=true;
     //ProgressDialog pD;
-    public static LinkedHashMap<String,String> map = new LinkedHashMap<String, String>();
+    public static LinkedHashMap<String,String> map = new LinkedHashMap<>();
 
     @Override
     public void onSaveInstanceState(Bundle outState) {
@@ -31,7 +32,13 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        skip=true;
         setContentView(R.layout.activity_login);
+
+        if (Build.VERSION.SDK_INT > 16) {
+            getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                    WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        }
         myDB = new Database(this);
         username = findViewById(R.id.editText_username);
         password = findViewById(R.id.editText_password);
@@ -49,7 +56,6 @@ public class LoginActivity extends AppCompatActivity {
                 Toast.makeText(LoginActivity.this,"Successfully Login!!",Toast.LENGTH_SHORT).show();
                 Intent intentLogin = new Intent(LoginActivity.this,Pizzazia.class);
                 startActivity(intentLogin);
-                finish();
                 skip=false;
             }
             else {
@@ -79,7 +85,6 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void Skip(View view) {
-        skip=true;
         Intent intentSkip = new Intent(LoginActivity.this,Pizzazia.class);
         startActivity(intentSkip);
         finish();

@@ -9,12 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Payment"
+        <activity android:name=".PurchasingDetails"></activity>
+        <activity
+            android:name=".Payment"
             android:label="Payment"
             android:parentActivityName=".Pizzazia">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="rishabhgupta.appdemo.pizzazia.Pizzazia"/>
+                android:value="rishabhgupta.appdemo.pizzazia.Pizzazia" />
         </activity>
         <activity android:name=".Pizzazia" />
         <activity

@@ -2,19 +2,13 @@ package rishabhgupta.appdemo.pizzazia;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.ContentValues;
-import android.content.Context;
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import java.util.LinkedHashMap;
-import java.util.Map;
 
 
 public class Signup extends AppCompatActivity {
@@ -31,6 +25,11 @@ public class Signup extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         myDB = new Database(this);
         setContentView(R.layout.activity_signup);
+
+        if (Build.VERSION.SDK_INT > 16) {
+            getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                    WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        }
         name = findViewById(R.id.editTextName);
         email = findViewById(R.id.editTextEmail);
         username = findViewById(R.id.editTextUsername);
@@ -52,7 +51,11 @@ public class Signup extends AppCompatActivity {
             confirmPassword.setText("");
             Toast.makeText(Signup.this,"Enter same password in both fields",Toast.LENGTH_SHORT).show();
         }
+        else if(!emails.endsWith("@gmail.com") && !emails.endsWith("@yahoo.com") && !emails.endsWith("@outlook.com")) {
+            Toast.makeText(Signup.this,"Enter valid E-mail id",Toast.LENGTH_SHORT).show();
+        }
         else {
+            LoginActivity.skip=false;
             myDB.insertData(usernameValue, passwordValue);
             Intent intentPizzazia = new Intent(Signup.this,Pizzazia.class);
             startActivity(intentPizzazia);

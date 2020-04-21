@@ -17,7 +17,7 @@ public class Database extends SQLiteOpenHelper {
     private static final String Col_2="Username";
     private static final String Col_3="Password";
     public static Cursor res;
-    public static LinkedHashMap<String,String> map = new LinkedHashMap<String, String>();
+    public static LinkedHashMap<String,String> map = new LinkedHashMap<>();
 
     public Database(Context context) {
         super(context, DATABASE_NAME, null, 1);
